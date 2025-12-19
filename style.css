@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+body {
+  background: linear-gradient(180deg, #f4f6fb, #e9edf5);
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+  color: #0f172a;
+}
+
+/* App Shell */
+.app {
+  width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  animation: enter 0.6s ease;
+}
+
+@keyframes enter {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Header */
+.header {
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 28px;
+  letter-spacing: -0.5px;
+}
+
+.header p {
+  font-size: 13px;
+  opacity: 0.6;
+}
+
+/* System Cards */
+.system-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.system-card {
+  background: rgba(255,255,255,0.7);
+  border: 1px solid rgba(0,0,0,0.05);
+  border-radius: 14px;
+  padding: 12px;
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.system-card.active {
+  opacity: 1;
+  box-shadow: 0 8px 24px rgba(99,102,241,0.15);
+  border-color: rgba(99,102,241,0.3);
+}
+
+/* Panels */
+.panel {
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(18px);
+  border-radius: 20px;
+  padding: 22px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.panel h2 {
+  font-size: 16px;
+  margin-bottom: 14px;
+}
+
+/* Inputs */
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  margin-bottom: 10px;
+}
+
+textarea {
+  resize: none;
+  min-height: 70px;
+}
+
+.slider-label {
+  font-size: 13px;
+  opacity: 0.7;
+  margin-bottom: 4px;
+  display: block;
+}
+
+/* Button */
+.primary {
+  background: #6366f1;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.primary:hover {
+  background: #4f46e5;
+}
+
+.primary:active {
+  transform: scale(0.97);
+}
+
+/* Decision Cards */
+.decision-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 14px;
+  margin-bottom: 10px;
+}
+
+.decision-card.muted {
+  opacity: 0.6;
+}
+
+.decision-card strong {
+  font-size: 14px;
+}
+
+.decision-card p {
+  font-size: 13px;
+  opacity: 0.7;
+  margin: 6px 0;
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  opacity: 0.6;
+}
