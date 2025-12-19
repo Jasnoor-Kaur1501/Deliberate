@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Human OS</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="app">
+
+    <!-- Header -->
+    <header class="header">
+      <h1>Human OS</h1>
+      <p>Your personal decision-making system</p>
+    </header>
+
+    <!-- System Overview -->
+    <section class="system-cards">
+      <div class="system-card active">
+        <h3>Decision Engine</h3>
+        <p>Capture decisions with confidence & context.</p>
+      </div>
+      <div class="system-card">
+        <h3>Outcome Review</h3>
+        <p>Review decisions after time passes.</p>
+      </div>
+      <div class="system-card">
+        <h3>Confidence Calibration</h3>
+        <p>Measure accuracy vs confidence.</p>
+      </div>
+    </section>
+
+    <!-- Decision Input -->
+    <section class="panel">
+      <h2>New Decision</h2>
+
+      <input type="text" placeholder="Decision title" />
+      <textarea placeholder="Context / assumptions"></textarea>
+
+      <label class="slider-label">
+        Confidence: <span>5</span>/10
+      </label>
+      <input type="range" min="1" max="10" value="5" />
+
+      <textarea placeholder="Expected outcome"></textarea>
+
+      <button class="primary">Save Decision</button>
+    </section>
+
+    <!-- Decision Feed -->
+    <section class="panel">
+      <h2>Decision Log</h2>
+
+      <div class="decision-card">
+        <strong>Should I switch internships?</strong>
+        <p>Career growth vs short-term stability.</p>
+        <div class="meta">
+          <span>Confidence: 7/10</span>
+          <span>Sep 2025</span>
+        </div>
+      </div>
+
+      <div class="decision-card muted">
+        <strong>Launch side project</strong>
+        <p>Time vs learning payoff.</p>
+        <div class="meta">
+          <span>Confidence: 4/10</span>
+          <span>Aug 2025</span>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+</body>
+</html>
